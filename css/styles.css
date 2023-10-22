@@ -11659,3 +11659,14 @@ html {
 .moving-text {
   animation: moveText 4s ease infinite;
 }
+
+.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.scroll-container img {
+  padding: 10px;
+}
