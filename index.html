@@ -20,6 +20,7 @@
 
     <!-- Core theme CSS (includes Bootstrap) -->
     <link href="css/styles.css" rel="stylesheet">
+    
 </head>
 <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
@@ -59,7 +60,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="profile bg-gradient-primary-to-secondary">
-                        <img class="profile-img" src="assets/profile.png" alt="Foto Rizky Fahreza Bakhtiar"/>
+                        <img id="profile-image" class="profile-img" src="assets/profile1.png" alt="Foto Rizky Fahreza Bakhtiar"/>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -96,6 +97,18 @@
             </div>
         </div>
     </footer>
+    <script>
+        var profileImages = ["assets/profile1.png", "assets/profile2.png", "assets/profile3.png"];
+        var currentImageIndex = 0;
+        var profileImageElement = document.getElementById("profile-image");
+        // Function to change the profile image
+        function changeProfileImage() {
+            currentImageIndex = (currentImageIndex + 1) % profileImages.length;
+            profileImageElement.src = profileImages[currentImageIndex];
+        }
+        // Set an interval to change the profile image every 5 seconds (5000 milliseconds)
+        setInterval(changeProfileImage, 2000);
+    </script>
     <!-- Bootstrap core JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS -->
